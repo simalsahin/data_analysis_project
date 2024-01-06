@@ -88,4 +88,3 @@ recommended_movies = recommend_movies('Klaus')
 print("Recommended movies are:")
 for i in recommended_movies:
     print(i)
-#print("Recommended movies are:", [x for x in recommended_movies])
