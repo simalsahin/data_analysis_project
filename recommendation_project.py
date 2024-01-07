@@ -74,17 +74,19 @@ index = pd.Series(df['title'])
 def recommend_movies(title):
     movies = []
     idx = index[index == title].index[0]
-    print(idx)
+    #print(idx)
     score = pd.Series(cosine_sim[idx]).sort_values(ascending=False)
     top5 = list(score.iloc[1:6].index)
-    print(top5)
+    #print(top5)
     
     for i in top5:       
         recommended_title = index.iloc[i]
         movies.append(recommended_title)
     return movies
 
-recommended_movies = recommend_movies('Klaus')
+movie = input("enter the movie you like: ")
+recommended_movies = recommend_movies(movie)
+print(f"if you like {movie};")
 print("Recommended movies are:")
 for i in recommended_movies:
     print(i)
