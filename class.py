@@ -39,7 +39,7 @@ from sklearn.neighbors import KNeighborsClassifier
 X_train, X_test, y_train, y_test = train_test_split(df_combined, genres_dummies, test_size=0.15, random_state=42)
 
 # Create KNN classifier
-knn = KNeighborsClassifier(n_neighbors=5)
+knn = KNeighborsClassifier(n_neighbors=3)
 X_train.columns = X_train.columns.astype(str)
 # Train the classifier
 knn.fit(X_train, y_train)
